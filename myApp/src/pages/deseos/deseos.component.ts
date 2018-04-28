@@ -5,6 +5,7 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './deseos.component.html'
 })
 export class DeseosComponent implements OnInit {
+
   constructor() { }
 
   ngOnInit(): void { }
