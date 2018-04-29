@@ -9,12 +9,14 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 //Servicios
 import { ListaDeseosService } from './services/lista-deseos.services';
 
+//Pipes
+import { PlaceholderPipe } from './pipe/placeholder.pipe';
 
 //Tabs
 import { TabsPage } from '../pages/tabs/tabs';
 import { DeseosComponent } from '../pages/deseos/deseos.component';
 import { CumplidosComponent } from '../pages/cumplidos/cumplidos.component';
-
+import { AgregarComponent } from '../pages/agregar/agregar.component';
 
 
 @NgModule({
@@ -22,6 +24,8 @@ import { CumplidosComponent } from '../pages/cumplidos/cumplidos.component';
     MyApp,
     DeseosComponent,
     CumplidosComponent,
+    AgregarComponent,
+    PlaceholderPipe,
     TabsPage
   ],
   imports: [
@@ -33,6 +37,7 @@ import { CumplidosComponent } from '../pages/cumplidos/cumplidos.component';
     MyApp,
     DeseosComponent,
     CumplidosComponent,
+    AgregarComponent,
     TabsPage
   ],
   providers: [
