@@ -17,6 +17,8 @@ import { TabsPage } from '../pages/tabs/tabs';
 import { DeseosComponent } from '../pages/deseos/deseos.component';
 import { CumplidosComponent } from '../pages/cumplidos/cumplidos.component';
 import { AgregarComponent } from '../pages/agregar/agregar.component';
+import { DetalleComponent } from '../pages/detalle/detalle.component';
+
 
 
 @NgModule({
@@ -26,6 +28,7 @@ import { AgregarComponent } from '../pages/agregar/agregar.component';
     CumplidosComponent,
     AgregarComponent,
     PlaceholderPipe,
+    DetalleComponent,
     TabsPage
   ],
   imports: [
@@ -38,6 +41,7 @@ import { AgregarComponent } from '../pages/agregar/agregar.component';
     DeseosComponent,
     CumplidosComponent,
     AgregarComponent,
+    DetalleComponent,
     TabsPage
   ],
   providers: [
