@@ -3,6 +3,7 @@ import { ListaDeseosService } from '../../app/services/lista-deseos.services';
 
 import { NavController } from 'ionic-angular';
 import { AgregarComponent } from '../agregar/agregar.component';
+import { DetalleComponent } from '../detalle/detalle.component';
 
 
 @Component({
@@ -21,4 +22,10 @@ export class CumplidosComponent implements OnInit {
     this.navCtrl.push( AgregarComponent )
   }
 
+  verDetalle( lista, index ){
+    this.navCtrl.push( DetalleComponent, {
+      lista,
+      index
+    } );
+  }
 }
