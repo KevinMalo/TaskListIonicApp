@@ -23,32 +23,43 @@ export class DetalleComponent implements OnInit {
     this.idx = this.NavParams.get("index");
     this.lista = this.NavParams.get("lista")
 
+
   }
 
   ngOnInit(): void { }
 
   actualizar( item: ListaItem ){
 
+    console.log('esto funciona');
+
     item.cumplido = !item.cumplido;
+
+    let todosMarcados = true;
+
+    for (let item of this.lista.items) {
+
+      if (item.cumplido) {
+        todosMarcados = false;
+        break;
+      }
+    }
+
+    this.lista.terminada = todosMarcados;
+
     this._listaDeseos.actualizarData();
 
   }
 
   borrarItem(){
     let confirm = this.alertCtrl.create({
-      title: 'Use this lightsaber?',
-      message: 'Do you agree to use this lightsaber to do good across the intergalactic galaxy?',
-      buttons: [
+      title: this.lista.nombre,
+      message: 'Esta seguro que desea eliminar la lista?',
+      buttons: ['Cancelar',
         {
-          text: 'Disagree',
+          text: 'Eliminar',
           handler: () => {
-            console.log('Disagree clicked');
-          }
-        },
-        {
-          text: 'Agree',
-          handler: () => {
-            console.log('Agree clicked');
+            this._listaDeseos.eliminarLista(this.idx);
+            this.navCtrl.pop();
           }
         }
       ]

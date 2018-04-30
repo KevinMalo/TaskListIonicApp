@@ -1,12 +1,12 @@
 <ion-header>
   <ion-navbar color="danger">
-    <ion-title>Deseos Cumplidos</ion-title>
+    <ion-title>Lista de Deseos</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
 
-  <ion-card *ngFor="let list of _listaDeseos.listas; let i = index ">
+  <ion-card *ngFor="let list of _listaDeseos.listas | pendientes; let i = index ">
 
     <ion-item color="primary" (click)="verDetalle( list, i )">
         <h2>{{ list.nombre }}</h2>

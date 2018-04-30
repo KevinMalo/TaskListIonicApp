@@ -11,6 +11,8 @@ import { ListaDeseosService } from './services/lista-deseos.services';
 
 //Pipes
 import { PlaceholderPipe } from './pipe/placeholder.pipe';
+import { PendientesPipe } from './pipe/pendientes.pipe';
+
 
 //Tabs
 import { TabsPage } from '../pages/tabs/tabs';
@@ -28,6 +30,7 @@ import { DetalleComponent } from '../pages/detalle/detalle.component';
     CumplidosComponent,
     AgregarComponent,
     PlaceholderPipe,
+    PendientesPipe,
     DetalleComponent,
     TabsPage
   ],

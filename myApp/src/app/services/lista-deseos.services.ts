@@ -30,4 +30,9 @@ export class ListaDeseosService {
     this.actualizarData();
   }
 
+  eliminarLista( index: number){
+    this.listas.splice( index,1 );
+    this.actualizarData();
+  }
+
 }

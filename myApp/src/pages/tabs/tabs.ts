@@ -9,8 +9,8 @@ import { CumplidosComponent } from '../cumplidos/cumplidos.component';
 })
 export class TabsPage {
 
-  tab1Root = DeseosComponent;
-  tab2Root = CumplidosComponent;
+  tab1Root = CumplidosComponent;
+  tab2Root = DeseosComponent;
 
   constructor() {
 
